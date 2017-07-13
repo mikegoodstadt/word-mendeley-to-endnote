@@ -13,13 +13,13 @@
     </author>
     <category citation-format="author-date"/>
     <category field="generic"/>
-    <updated>2017-07-13T06:24:47+00:00</updated>
+    <updated>2017-07-13T13:11:26+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <citation>
     <layout prefix="{" suffix="}">
       <names variable="author" suffix=", ">
-        <name form="short" et-al-min="2" et-al-use-first="1" initialize-with="" name-as-sort-order="first"/>
+        <name form="short" et-al-min="1" initialize-with="" name-as-sort-order="first"/>
       </names>
       <date form="text" variable="issued" prefix=" " suffix=" "/>
       <text variable="citation-number" prefix="#"/>
@@ -27,9 +27,12 @@
   </citation>
   <bibliography>
     <layout>
-      <names variable="author" suffix=" "/>
+      <text variable="citation-number" strip-periods="false" quotes="false" vertical-align="baseline" suffix=". "/>
+      <names variable="author" font-weight="bold" suffix=". ">
+        <name initialize-with="" name-as-sort-order="all" sort-separator=" "/>
+      </names>
       <date form="text" variable="issued" prefix="(" suffix=") "/>
-      <text variable="title" suffix=" "/>
+      <text variable="title" suffix=". "/>
       <text variable="container-title" suffix=" "/>
       <text variable="volume" suffix=" "/>
       <text variable="issue" suffix=" "/>
