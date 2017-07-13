@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
   <info>
-    <title>Basic Style</title>
+    <title>EndNote Temporary Citation Style</title>
     <id>http://www.zotero.org/styles/basic-style</id>
     <link href="http://www.zotero.org/styles/basic-style" rel="self"/>
     <author>
       <name>Sebastian Karcher</name>
     </author>
+    <author>
+      <name>Mike Goodstadt</name>
+      <email>mikegoodstadt@gmail.com</email>
+    </author>
     <category citation-format="author-date"/>
     <category field="generic"/>
-    <updated>2015-10-04T19:32:17+00:00</updated>
+    <updated>2017-07-13T06:24:47+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <citation>
-    <layout>
-     <text variable="title"/>
+    <layout prefix="{" suffix="}">
+      <names variable="author" suffix=", ">
+        <name form="short" et-al-min="2" et-al-use-first="1" initialize-with="" name-as-sort-order="first"/>
+      </names>
+      <date form="text" variable="issued" prefix=" " suffix=" "/>
+      <text variable="citation-number" prefix="#"/>
     </layout>
   </citation>
-  <bibliography >
+  <bibliography>
     <layout>
-      <text variable="title"/>
+      <names variable="author" suffix=" "/>
+      <date form="text" variable="issued" prefix="(" suffix=") "/>
+      <text variable="title" suffix=" "/>
+      <text variable="container-title" suffix=" "/>
+      <text variable="volume" suffix=" "/>
+      <text variable="issue" suffix=" "/>
+      <text variable="page" suffix="."/>
     </layout>
   </bibliography>
 </style>
